@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
+import Header from './Header';
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
+import Footer from './Footer';
+
+const routes = [Home, About, Projects, Contact];
+
+const links = [
+  { home: Home },
+  { about: About },
+  { projects: Projects },
+  { contact: Contact },
+];
+
+const App = () => {
+  console.log(links.map((link) => Object.keys(link)[0]));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header links={routes.map(({ name }) => name)} />
+        <div>Hey! I'm going to be the new cuBlueprint website 🤠</div>
+        <Switch>
+          {routes.map((route) => (
+            <Route key={`r-${route.name}`} exact path={`/${route.name}`}>
+              {route}
+            </Route>
+          ))}
+        </Switch>
+      </Router>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
