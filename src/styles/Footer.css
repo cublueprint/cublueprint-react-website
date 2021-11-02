@@ -17,9 +17,13 @@
     
 }
 
+.footer-column:nth-child(3n){
+    /* flex-basis: 100%; */
+}
+
 .footer-column .main{
     /* float:left; */
-    flex-basis: height ;
+    /* flex-basis: height ; */
 }
 
 .footer-column { 

@@ -2,6 +2,7 @@
 //import Fade from "react-reveal/Fade";
 //import data from "../content/footer";
 import "./styles/Footer.css";
+import footerImages from "./content/json/footer";
 
 const Footer = () => {
   return (
@@ -12,8 +13,25 @@ const Footer = () => {
           <h3 className="blueprint-title">"image" Blueprint</h3>
           <div>
             <p className="stay-in-the-loop">stay in the loop</p>
-            <p> for loop of icons + links! </p>
-          </div>
+            <div className="social-icons">
+                {footerImages.social.map((socialLink) => (
+                  <a
+                    href={socialLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={socialLink.key}
+                  >
+                    <img src={socialLink.img} alt="icons"></img>
+                  </a>
+                ))}
+              </div>
+              <a
+                className="return-button"
+                href="#"
+              >
+                Return to main site
+              </a>
+            </div>
         </div>
 
       <div className="body">
