@@ -29,6 +29,9 @@ const StyledHeader = styled.div`
   align-items: center;
   justify-content: space-around;
   z-index: 1;
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 `;
 
 const StyledHeaderList = styled.div`
