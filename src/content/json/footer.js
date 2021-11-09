@@ -1,14 +1,14 @@
 import linkedinIcon from "../images/linkedin-icon.webp";
-import igIcon from "../images/ig-icon.webp"
-import fbIcon from "../images/fb-icon.webp"
-import youtubeIcon from "../images/youtube-icon.webp"
-//import ptcIcon from "../images/PTC Logo Transparent.webp"
+import igIcon from "../images/ig-icon.webp";
+import fbIcon from "../images/fb-icon.webp";
+import youtubeIcon from "../images/youtube-icon.webp";
+import blueprintIcon from "../images/blueprint_banner_negative.webp";
 
 const footerJson =  {
 
   // End Promotion Section -----------------
 
-  //ptcIcon: ptcIcon,
+  blueprintIcon: blueprintIcon,
   
   social: [
     // Add Or Remove The Link Accordingly

@@ -12,7 +12,10 @@ const Footer = () => {
       <div className="body">
 
         <div className="main-column">
-            <h3 className="blueprint-title">"image" Blueprint</h3>
+            {/* <h3 className="blueprint-title">
+              Blueprint
+            </h3> */}
+            <img className="blueprint-logo" src={footerImages.blueprintIcon} /> 
             <div>
               <p className="stay-in-the-loop">Stay in the loop</p>
               <div className="social-icons">

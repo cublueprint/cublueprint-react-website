@@ -48,6 +48,12 @@
     font-size: 16px;
 }
 
+.blueprint-logo{
+    margin-top: 20px;
+    height: 35px;
+    margin-right: 5px;
+}
+
 .footer-title{
     font-weight: 400;
 }
