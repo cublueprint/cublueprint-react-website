@@ -17,6 +17,13 @@
     margin: 20px; 
 }
 
+@media (min-width: 550px) {
+    .footer .main-column{
+        margin-left:20px; 
+    }
+  }
+
+
 .footer .nested{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

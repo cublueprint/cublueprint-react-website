@@ -11,7 +11,6 @@ const Footer = () => {
 
       <div className="body">
 
-
         <div className="main-column">
             <h3 className="blueprint-title">"image" Blueprint</h3>
             <div>
