@@ -12,9 +12,11 @@
 .footer .body{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-auto-rows: minmax(100px, auto);
+    /* grid-auto-rows: minmax(100px, auto); */
     grid-column-gap: 20px; 
     margin: 20px; 
+    padding-top: 25px;
+    padding: 25px; 
 }
 
 @media (min-width: 550px) {
@@ -27,20 +29,29 @@
 .footer .nested{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-row-gap: 20px; 
+    /* grid-row-gap: 20px;  */
+    grid-gap: 20px; 
+    grid-auto-columns: minmax(200px, auto);
 }
 
 @media (max-width: 800px) {
     .footer .nested{
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 20px; 
     }
   }
 
+@media (max-width: 300px) {
+    .footer .body{
+        display: grid; 
+        grid-template-columns: 1fr ;
+    }
 
-.footer-column { 
-    margin: 20px;
+    .footer .nested{
+        padding-top: 30px;
+        display: grid; 
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-column>* { 
@@ -49,9 +60,9 @@
 }
 
 .blueprint-logo{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     height: 35px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
 }
 
 .footer-title{
@@ -64,6 +75,13 @@
     padding-left: 0;
 } 
 
+.main-column{
+    display: grid; 
+}
+
+.stay-in-the-loop{
+    align-self: end; 
+}
 
 .made-with-luv{
     background-color: #2F80ED;
