@@ -34,6 +34,49 @@ const footerJson =  {
     },
   ],
 
+  columns: [
+    {
+      title: "About",
+      lis: [
+        "item",
+        "item",
+        "item"
+      ]
+    },
+    {
+      title: "Projects",
+      lis: [
+        "Current Projects",
+        "Past Projects",
+        "Apply"
+      ]
+    },
+    {
+      title: "Team",
+      lis: [
+        "Beneficent",
+        "Urban Minds",
+        "Blueprint Website",
+        "Join Us"
+      ]
+    },
+    {
+      title: "Contact",
+      lis: [
+        "item",
+        "item",
+        "item"
+      ]
+    },
+    {
+      title: "About",
+      lis: [
+        "item",
+        "item",
+        "item"
+      ]
+    },
+  ]
   // End Contact Section ---------------
 }
 
