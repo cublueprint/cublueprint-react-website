@@ -1,6 +1,3 @@
-//import React from "react";
-//import Fade from "react-reveal/Fade";
-//import data from "../content/footer";
 import styled from 'styled-components';
 import "./styles/Footer.css";
 import footerImages from "./content/json/footer";
@@ -8,7 +5,6 @@ import footerImages from "./content/json/footer";
 const Footer = () => {
   return (
     <FooterBody>
-
       <FooterGrid>
         <FooterBody>
             <BlueprintLogo src={footerImages.blueprintIcon} alt="blueprint"/> 
@@ -41,57 +37,6 @@ const Footer = () => {
               </FooterColumn>
           ))}
         </FooterNested>
-
-        {/* <FooterNested>
-          <FooterColumn>
-              <FooterTitle>About</FooterTitle>
-              <FooterUL>
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-              </FooterUL>
-          </FooterColumn>
-
-          <FooterColumn>
-              <FooterTitle>Projects</FooterTitle>
-              <FooterUL>
-                <li>Current Projects</li> 
-                <li>Past Projects</li> 
-                <li>Apply</li> 
-              </FooterUL>
-          </FooterColumn>
-
-          <FooterColumn>
-              <FooterTitle>Team</FooterTitle>
-              <FooterUL>
-                <li>Beneficent</li> 
-                <li>Urban Minds</li> 
-                <li>Blueprint Website</li> 
-                <li>Join Us</li> 
-              </FooterUL>
-          </FooterColumn>
-
-          <FooterColumn>
-              <FooterTitle>Contact</FooterTitle>
-              <FooterUL>
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-              </FooterUL>
-          </FooterColumn>
-
-          <FooterColumn>
-              <FooterTitle>About</FooterTitle>
-              <FooterUL>
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-                <li>item</li> 
-              </FooterUL>
-          </FooterColumn>
-        </FooterNested> */}
       </FooterGrid>
 
       <MadeWithLove>
@@ -102,7 +47,6 @@ const Footer = () => {
 };
 
 const FooterBody = styled.div`
-  /* width: 100%; */
   background-color: #333;
   color: white;
   font-family: "source sans pro";
@@ -117,7 +61,6 @@ const FooterBody = styled.div`
 const FooterGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 3fr;
-    /* grid-auto-rows: minmax(100px, auto); */
     grid-column-gap: 20px; 
     margin: 20px; 
     padding-top: 25px;
@@ -127,7 +70,6 @@ const FooterGrid = styled.div`
 const FooterNested = styled.div`
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* grid-row-gap: 20px;  */
     grid-gap: 20px; 
     grid-auto-columns: minmax(200px, auto);
 
