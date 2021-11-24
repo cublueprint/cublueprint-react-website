@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import blueprintIcon from "../content/images/blueprint_banner_negative.webp";
+import blueprintIcon from '../content/images/blueprint_banner_negative.webp';
 
 interface HeaderProps {
   links: string[];
@@ -19,9 +19,9 @@ const Header = ({ links }: HeaderProps) => (
   </StyledHeader>
 );
 
-const BlueprintIcon = (props: any) => (
+const BlueprintIcon = (props: { link: string }) => (
   <Link to={props.link}>
-    <img alt="Blueprint" style={{ maxWidth: '150px', marginLeft: '50px' }} src={blueprintIcon}></img>
+    <StyledBlueprintImage alt='Blueprint' src={blueprintIcon} />
   </Link>
 );
 
@@ -61,6 +61,11 @@ const StyledHeaderLink = styled.div`
   a:hover {
     color: #ffffff;
   }
+`;
+
+const StyledBlueprintImage = styled.img`
+  max-width: 150px;
+  margin-left: 50px;
 `;
 
 export default Header;
