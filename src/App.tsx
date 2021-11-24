@@ -1,18 +1,20 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import Header from './Header';
+import Header from './Header/Header';
 import Home from './Home';
 import About from './About';
 import Projects from './Projects';
+import Apply from './Apply';
 import Contact from './Contact';
 import Footer from './Footer';
 
-const routes = [Home, About, Projects, Contact];
+const routes = [Home, About, Projects, Apply, Contact];
 
 const links = [
   { home: Home },
   { about: About },
   { projects: Projects },
+  { apply: Apply },
   { contact: Contact },
 ];
 
