@@ -6,12 +6,9 @@ import blueprintIcon from "../images/blueprint_banner_negative.webp";
 
 const footerJson =  {
 
-  // End Promotion Section -----------------
-
   blueprintIcon: blueprintIcon,
   
   social: [
-    // Add Or Remove The Link Accordingly
     {
       key: 1,
       img: linkedinIcon,
