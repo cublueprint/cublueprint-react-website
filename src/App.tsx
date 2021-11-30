@@ -5,7 +5,7 @@ import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
-import Footer from './Footer';
+import Footer from './Footer/Footer';
 
 const routes = [Home, About, Projects, Contact];
 
