@@ -22,22 +22,20 @@ const Footer = () => {
           <Line/>
         </LogoDiv>
 
-        {/* <FooterNested> */}
-          {footerImages.columns.map((socialLink) => (
-              <FooterBox>
-                  <FooterTitle>{socialLink.title}</FooterTitle>
-                  <FooterUL>
-                    {socialLink.lis.map((li) => (
-                      <li> 
-                        <FooterAnchors href={li.link}>
-                          {li.text}
-                        </FooterAnchors>
-                      </li> 
-                    ))}
-                  </FooterUL>
-              </FooterBox>
-          ))}
-        {/* </FooterNested> */}
+        {footerImages.columns.map((socialLink) => (
+            <FooterBox>
+                <FooterTitle>{socialLink.title}</FooterTitle>
+                <FooterUL>
+                  {socialLink.lis.map((li) => (
+                    <li> 
+                      <FooterAnchors href={li.link}>
+                        {li.text}
+                      </FooterAnchors>
+                    </li> 
+                  ))}
+                </FooterUL>
+            </FooterBox>
+        ))}
       </FooterGrid>
 
       <MadeWithLove>
@@ -106,6 +104,7 @@ const Line = styled.hr``;
 const FooterUL = styled.ul`
   list-style: none;
   list-style-position: inside;
+  margin: 0;
   padding-left: 0;
   font-weight: 300; 
 `;
