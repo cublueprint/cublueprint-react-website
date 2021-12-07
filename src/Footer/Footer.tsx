@@ -3,90 +3,93 @@ import footerImages from "../content/json/footer";
 
 const Footer = () => {
   return (
-    <FooterBody>
+    <FooterContainer>
       <FooterGrid>
-        <FooterBody>
+        <LogoDiv>
             <BlueprintLogo src={footerImages.blueprintIcon} alt="blueprint"/> 
-            <div>
-              <p>Stay in the loop</p>
-              <div>
-                  {footerImages.social.map((socialLink) => (
-                    <a
-                      href={socialLink.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key={socialLink.key}
-                    >
-                      <img src={socialLink.img} alt="icons"></img>
-                    </a>
-                  ))}
-                </div>
-            </div>
-        </FooterBody>
+            <Line/>
+            <p>Stay in the loop</p>
+            {footerImages.social.map((socialLink) => (
+              <a
+                href={socialLink.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={socialLink.key}
+              >
+                <img src={socialLink.img} alt="icons"></img>
+              </a>
+            ))}
+          <Line/>
+        </LogoDiv>
 
-        <FooterNested>
+        {/* <FooterNested> */}
           {footerImages.columns.map((socialLink) => (
-              <FooterColumn>
+              <FooterBox>
                   <FooterTitle>{socialLink.title}</FooterTitle>
                   <FooterUL>
                     {socialLink.lis.map((li) => (
-                      <li>{li}</li> 
+                      <FooterLI> 
+                        {li}
+                      </FooterLI> 
                     ))}
                   </FooterUL>
-              </FooterColumn>
+              </FooterBox>
           ))}
-        </FooterNested>
+        {/* </FooterNested> */}
       </FooterGrid>
 
       <MadeWithLove>
         Made with ❤️ by The Blueprint Team
       </MadeWithLove>
-    </FooterBody>
+    </FooterContainer>
   );
 };
 
-const FooterBody = styled.div`
+const FooterContainer = styled.div` 
   background-color: #333;
   color: white;
   font-family: "source sans pro";
-  font-weight: 300;
-
-  @media (max-width: 300px) {
-      display: grid; 
-      grid-template-columns: 1fr ;
-  }
+  font-weight: 400; 
 `;
 
 const FooterGrid = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-column-gap: 20px; 
-    margin: 20px; 
-    padding-top: 25px;
-    padding: 25px; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 40px; 
+  margin: 20px; 
+  padding-top: 25px;
+  padding: 25px; 
+  grid-template-areas:
+      "logoDiv"
+      ; 
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logoDiv logoDiv"
+      ; 
+  }
+
+  @media (max-width: 425px) {
+    display: block; 
+  } 
 `;
 
-const FooterNested = styled.div`
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px; 
-    grid-auto-columns: minmax(200px, auto);
+const LogoDiv = styled.div`
+  grid-area: logoDiv; 
 
-    @media (max-width: 800px) {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+`; 
 
-    @media (max-width: 300px) {
-        padding-top: 30px;
-        display: grid; 
-        grid-template-columns: 1fr;
-    }
-`;
+const FooterBox = styled.div`
+  margin: 0;
+  font-size: 16px;
 
-const FooterColumn = styled.div`
-    margin: 0;
-    font-size: 16px;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
 `;
 
 const FooterTitle = styled.div`
@@ -97,13 +100,21 @@ const BlueprintLogo = styled.img`
   height: 35px;
 `;
 
-const FooterUL = styled.div`
-    list-style: none;
-    list-style-position: inside;
-    padding-left: 0;
+const Line = styled.hr``; 
+
+const FooterUL = styled.ul`
+  list-style: none;
+  list-style-position: inside;
+  padding-left: 0;
+  font-weight: 300; 
 `;
 
-const MadeWithLove = styled.div`
+const FooterLI = styled.li`
+  font-size: 14px;
+  font-weight: 300; 
+`;
+
+const MadeWithLove = styled.div` 
   background-color: #2F80ED;
   text-align: center;
 `;

@@ -33,7 +33,7 @@ const footerJson =  {
 
   columns: [
     {
-      title: "About",
+      title: "ABOUT",
       lis: [
         "item",
         "item",
@@ -41,7 +41,7 @@ const footerJson =  {
       ]
     },
     {
-      title: "Projects",
+      title: "PROJECTS",
       lis: [
         "Current Projects",
         "Past Projects",
@@ -49,7 +49,7 @@ const footerJson =  {
       ]
     },
     {
-      title: "Team",
+      title: "TEAM",
       lis: [
         "Beneficent",
         "Urban Minds",
@@ -58,7 +58,7 @@ const footerJson =  {
       ]
     },
     {
-      title: "Contact",
+      title: "CONTACT",
       lis: [
         "item",
         "item",
@@ -66,7 +66,7 @@ const footerJson =  {
       ]
     },
     {
-      title: "About",
+      title: "ABOUT",
       lis: [
         "item",
         "item",
