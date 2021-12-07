@@ -28,9 +28,11 @@ const Footer = () => {
                   <FooterTitle>{socialLink.title}</FooterTitle>
                   <FooterUL>
                     {socialLink.lis.map((li) => (
-                      <FooterLI> 
-                        {li}
-                      </FooterLI> 
+                      <li> 
+                        <FooterAnchors href={li.link}>
+                          {li.text}
+                        </FooterAnchors>
+                      </li> 
                     ))}
                   </FooterUL>
               </FooterBox>
@@ -57,7 +59,6 @@ const FooterGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 40px; 
   margin: 20px; 
-  padding-top: 25px;
   padding: 25px; 
   grid-template-areas:
       "logoDiv"
@@ -109,14 +110,17 @@ const FooterUL = styled.ul`
   font-weight: 300; 
 `;
 
-const FooterLI = styled.li`
+const FooterAnchors = styled.a`
   font-size: 14px;
   font-weight: 300; 
+  color: white;
+  text-decoration: inherit;
 `;
 
 const MadeWithLove = styled.div` 
   background-color: #2F80ED;
   text-align: center;
+  padding: 5px 0;
 `;
 
 export default Footer;

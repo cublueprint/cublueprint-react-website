@@ -35,42 +35,42 @@ const footerJson =  {
     {
       title: "ABOUT",
       lis: [
-        "item",
-        "item",
-        "item"
+        {link: "#", text: "item"},
+        {link: "#", text: "item"},
+        {link: "#", text: "item"}
       ]
     },
     {
       title: "PROJECTS",
       lis: [
-        "Current Projects",
-        "Past Projects",
-        "Apply"
+        {link: "#", text: "Current Projects"},
+        {link: "#", text: "Past Projects"},
+        {link: "#", text: "Apply"}
       ]
     },
     {
       title: "TEAM",
       lis: [
-        "Beneficent",
-        "Urban Minds",
-        "Blueprint Website",
-        "Join Us"
+        {link: "#", text: "Beneficent"},
+        {link: "#", text: "Urban Minds"},
+        {link: "#", text: "Blueprint Website"},
+        {link: "#", text: "Join Us"}
       ]
     },
     {
       title: "CONTACT",
       lis: [
-        "item",
-        "item",
-        "item"
+        {link: "#", text: "item"},
+        {link: "#", text: "item"},
+        {link: "#", text: "item"}
       ]
     },
     {
       title: "ABOUT",
       lis: [
-        "item",
-        "item",
-        "item"
+        {link: "#", text: "item"},
+        {link: "#", text: "item"},
+        {link: "#", text: "item"}
       ]
     },
   ]
