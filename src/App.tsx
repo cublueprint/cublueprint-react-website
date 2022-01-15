@@ -1,8 +1,9 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Theme from "./Theme";
-import { createGlobalStyle } from 'styled-components';
-import styled from "styled-components";
-// import Poppins from './content/fonts/Poppins-SemiBold.ttf';
+import styled, { createGlobalStyle } from 'styled-components';
+
+import Theme from './Theme';
+import { Fonts } from './content';
+
 import { Header } from './Header';
 import Home from './Home';
 import About from './About';
@@ -30,7 +31,8 @@ const App = () => {
   return (
     <Theme>
       <GlobalStyle />
-      AAAAAAAA
+      <Fonts />
+      MEERA
       <Router>
         {/* <Heading isHeading={true}>hello</Heading> */}
         <Header links={routes.map(({ name }) => name)} />
@@ -49,12 +51,6 @@ const App = () => {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: "Poppins",
-    font-style: normal;
-    font-weight: 200;
-    src: url("./content/fonts/Poppins-SemiBold.ttf") format('truetype'), /* Safari, Android, iOS */
-  }
   body {
     margin: 0;
     padding: 0;
@@ -64,16 +60,15 @@ const GlobalStyle = createGlobalStyle`
 
 const Container = styled.div`
   width: 100%;
-  border: ${props => `1px solid ${props.theme.colors.onyx}`};
-  background-color: ${props => props.theme.colors.lightBlue};
-  font-family: ${props => props.theme.fonts[0]};
+  border: ${(props) => `1px solid ${props.theme.colors.onyx}`};
+  background-color: ${(props) => props.theme.colors.lightBlue};
+  font-family: ${(props) => props.theme.fonts[0]};
 `;
 
 const Heading = styled.h1<HeadingProps>`
-  font-size: ${({isHeading, theme: { fontSizes } }) =>
+  font-size: ${({ isHeading, theme: { fontSizes } }) =>
     isHeading ? fontSizes.large : fontSizes.small};
   color: ${({ theme: { colors } }) => colors.persianGreen};
 `;
-
 
 export default App;
