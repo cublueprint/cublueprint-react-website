@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 import blueprintIcon from '../content/images/blueprint_banner_negative.webp';
 
 interface HeaderProps {
@@ -27,10 +26,10 @@ const BlueprintIcon = (props: { link: string }) => (
 );
 
 const StyledHeader = styled.div`
-  background-color: ${props => props.theme.colors.primaryBlue};
-  color: ${props => props.theme.colors.offWhite};
-  font-size: ${props => props.theme.fontSizes.small};
-  font-family: ${props => props.theme.fonts.heading};
+  background-color: ${(props) => props.theme.colors.primaryBlue};
+  color: ${(props) => props.theme.colors.offWhite};
+  font-size: ${(props) => props.theme.fontSizes.small};
+  font-family: ${(props) => props.theme.fonts.heading};
   font-weight: bold;
   text-transform: uppercase;
 
@@ -47,11 +46,11 @@ const StyledHeader = styled.div`
 `;
 
 const StyledHeaderList = styled.div`
-  @media ${props => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+  @media ${(props) => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
     display: none
   }
 
-  @media ${props => props.theme.viewport.laptop} {
+  @media ${(props) => props.theme.viewport.laptop} {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -63,7 +62,7 @@ const StyledHeaderList = styled.div`
 const StyledHeaderLink = styled.div`
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.offWhite};
+    color: ${(props) => props.theme.colors.offWhite};
   }
   a:hover {
     color: #ffffff;
