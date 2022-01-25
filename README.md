@@ -8,7 +8,7 @@ You can find our live website available at: [link](enter link here thanks)
 
 ## Motivation for Project
 
-In 2021, we decided to build our club a brand new website with an improved UI and a more modern tech stack. The reason for this change was that our old website was built with __[insert outdated technology]__ and was becoming increasingly difficult for our exec team to maintain.
+In 2021, we decided to build our club a brand new website with an improved UI and a more modern tech stack. The reason for this change was that our old website was built with Pug and had outdated design decisions.
 
 To meet these challenges, our team designed a [new UI using Figma](https://www.figma.com/file/Qt7bGynNItu0hUvPu0EPGa/Draft-Website-Design?node-id=0%3A1) and is currently working on developing it using React, Typescript and styled components. 
 
@@ -29,7 +29,7 @@ The following is a visual map of how to navigate our website:
 * TypeScript
 * React
 * Yarn
-* Styled Components
+* Styled Components 💅 
 
 
 ## How to run the website in Development
@@ -59,7 +59,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Credits
 
 Credits for the website go to:
-* Deen
-* Meerah
-* Seneli
-* Samee
+* [Deen](www.linkedin.com/in/deenhaque)
+* [Meerah](https://www.linkedin.com/in/meera-balsara/)
+* [Seneli](https://www.linkedin.com/in/seneliseneviratne/)
+* [Samee](https://www.linkedin.com/in/samee-shahood/)
