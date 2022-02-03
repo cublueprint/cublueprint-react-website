@@ -26,10 +26,10 @@ const BlueprintIcon = (props: { link: string }) => (
 );
 
 const StyledHeader = styled.div`
-  background-color: #3988ff;
-  color: #dfefff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  background-color: ${(props) => props.theme.colors.primaryBlue};
+  color: ${(props) => props.theme.colors.offWhite};
+  font-size: ${(props) => props.theme.fontSizes.small};
+  font-family: ${(props) => props.theme.fonts.heading};
   font-weight: bold;
   text-transform: uppercase;
 
@@ -46,17 +46,23 @@ const StyledHeader = styled.div`
 `;
 
 const StyledHeaderList = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 3vw;
-  margin-right: 50px;
+  @media ${(props) => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+    display: none
+  }
+
+  @media ${(props) => props.theme.viewport.laptop} {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3vw;
+    margin-right: 50px;
+  }
 `;
 
 const StyledHeaderLink = styled.div`
   a {
     text-decoration: none;
-    color: #dfefff;
+    color: ${(props) => props.theme.colors.offWhite};
   }
   a:hover {
     color: #ffffff;
@@ -64,8 +70,9 @@ const StyledHeaderLink = styled.div`
 `;
 
 const StyledBlueprintImage = styled.img`
+  padding-top: 5px;
   max-width: 150px;
-  margin-left: 50px;
+  margin-left: 4vw;
 `;
 
 export default Header;
