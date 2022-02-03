@@ -18,7 +18,7 @@ const theme = {
     large: "3em"
   },
   viewport: {
-    mobile: "(min-width: 425px)",
+    mobile: "(min-width: 320px)",
     tablet: "(min-width: 768px)",
     laptop: "(min-width: 1024px)",
   }

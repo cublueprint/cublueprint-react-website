@@ -23,7 +23,6 @@ const links = [
 ];
 
 const App = () => {
-  console.log(links.map((link) => Object.keys(link)[0]));
   return (
     <Theme>
       <GlobalStyle />

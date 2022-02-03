@@ -3,7 +3,7 @@ import PoppinsWOFF2 from './poppins-v15-latin-regular.woff2';
 import PoppinsWOFF from './poppins-v15-latin-regular.woff';
 import PoppinsSVG from './poppins-v15-latin-regular.svg';
 
-import PoppinsTTF from './poppins-v15-latin-regular.ttf'; //'./Poppins-SemiBold.ttf';
+import PoppinsTTF from './poppins-v15-latin-regular.ttf'; 
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
