@@ -1,4 +1,8 @@
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+
+import Theme from './Theme';
+import { Fonts } from './content';
 
 import { Header } from './Header';
 import Home from './Home';
@@ -19,9 +23,10 @@ const links = [
 ];
 
 const App = () => {
-  console.log(links.map((link) => Object.keys(link)[0]));
   return (
-    <>
+    <Theme>
+      <GlobalStyle />
+      <Fonts />
       <Router>
         <Header links={routes.map(({ name }) => name)} />
         <div>Hey! I'm going to be the new cuBlueprint website 🤠</div>
@@ -34,8 +39,16 @@ const App = () => {
         </Switch>
       </Router>
       <Footer />
-    </>
+    </Theme>
   );
 };
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Source Sans Pro", sans-serif;
+  }
+`;
 
 export default App;
