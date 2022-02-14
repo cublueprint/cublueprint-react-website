@@ -59,7 +59,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Credits
 
 Credits for the website go to:
-* [Deen](www.linkedin.com/in/deenhaque)
-* [Meerah](https://www.linkedin.com/in/meera-balsara/)
+* [Deen](https://www.linkedin.com/in/deenhaque)
+* [Meera](https://www.linkedin.com/in/meera-balsara/)
 * [Seneli](https://www.linkedin.com/in/seneliseneviratne/)
 * [Samee](https://www.linkedin.com/in/samee-shahood/)
