@@ -46,32 +46,33 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.div` 
-  background-color: #333;
-  color: white;
-  font-family: "source sans pro";
-  font-weight: 400; 
+  background-color: ${(props) => props.theme.colors.darkGrey};
+  color: ${(props) => props.theme.colors.offWhite};
+  font-family: ${(props) => props.theme.fonts.content};
 `;
 
 const FooterGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 40px; 
   margin: 20px; 
-  padding: 25px; 
-  grid-template-areas:
-      "logoDiv"
-      ; 
-
-  @media (max-width: 768px) {
+  padding: 25px;  
+  display: block;
+  
+  @media ${(props) => `${props.theme.viewport.tablet}`} {
+    display: grid;
+    grid-column-gap: 40px; 
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "logoDiv logoDiv"
-      ; 
+    ; 
   }
 
-  @media (max-width: 425px) {
-    display: block; 
-  } 
+  @media ${(props) => `${props.theme.viewport.laptop}`} {
+    display: grid;
+    grid-column-gap: 40px; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "logoDiv"
+    ; 
+  }
 `;
 
 const LogoDiv = styled.div`
