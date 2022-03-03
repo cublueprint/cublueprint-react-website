@@ -1,49 +1,47 @@
 import styled from 'styled-components';
 import footerImages from "../content/json/footer";
 
-const Footer = () => {
-  return (
-    <FooterContainer>
-      <FooterGrid>
-        <LogoDiv>
-            <BlueprintLogo src={footerImages.blueprintIcon} alt="blueprint"/> 
-            <Line/>
-            <p>Stay in the loop</p>
-            {footerImages.social.map((socialLink) => (
-              <a
-                href={socialLink.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={socialLink.key}
-              >
-                <img src={socialLink.img} alt="icons"></img>
-              </a>
-            ))}
+const Footer = () => (
+  <FooterContainer>
+    <FooterGrid>
+      <LogoDiv>
+          <BlueprintLogo src={footerImages.blueprintIcon} alt="blueprint"/> 
           <Line/>
-        </LogoDiv>
+          <p>Stay in the loop</p>
+          {footerImages.social.map((socialLink) => (
+            <a
+              href={socialLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={socialLink.key}
+            >
+              <img src={socialLink.img} alt="icons"></img>
+            </a>
+          ))}
+        <Line/>
+      </LogoDiv>
 
-        {footerImages.columns.map((socialLink) => (
-            <FooterBox>
-                <FooterTitle>{socialLink.title}</FooterTitle>
-                <FooterUL>
-                  {socialLink.lis.map((li) => (
-                    <li> 
-                      <FooterAnchors href={li.link}>
-                        {li.text}
-                      </FooterAnchors>
-                    </li> 
-                  ))}
-                </FooterUL>
-            </FooterBox>
-        ))}
-      </FooterGrid>
+      {footerImages.columns.map((socialLink) => (
+          <FooterBox>
+              <FooterTitle>{socialLink.title}</FooterTitle>
+              <FooterUL>
+                {socialLink.lis.map((li) => (
+                  <li> 
+                    <FooterAnchors href={li.link}>
+                      {li.text}
+                    </FooterAnchors>
+                  </li> 
+                ))}
+              </FooterUL>
+          </FooterBox>
+      ))}
+    </FooterGrid>
 
-      <MadeWithLove>
-        Made with ❤️ by The Blueprint Team
-      </MadeWithLove>
-    </FooterContainer>
-  );
-};
+    <MadeWithLove>
+      Made with ❤️ by The Blueprint Team
+    </MadeWithLove>
+  </FooterContainer>
+);
 
 const FooterContainer = styled.div` 
   background-color: ${(props) => props.theme.colors.darkGrey};
