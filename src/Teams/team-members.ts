@@ -1,16 +1,37 @@
 
 /*
 team
-    team_name (String) :
+    team_name (String):
+        {
+            name:
+            linkedin:
+        }
 */
-export const teams = [
+const teams = [
     {"Execs": [
-
+        {
+            name: "Name",
+            linkedin: "linkedin",
+            picture: "picture of you"
+        }, {
+            name: "Name",
+            linkedin: "linkedin",
+            picture: "picture of you"
+        }, {
+            name: "Name",
+            linkedin: "linkedin",
+            picture: "picture of you"
+        }
     ]},{
     "Urban Minds": [
 
     ]},{
     "Beneficient": [
 
+    ]},{
+    "Website Team": [
+    
     ]}
-]
+];
+
+export default teams; 
