@@ -12,7 +12,9 @@ import Apply from './Apply';
 import Contact from './Contact';
 import Footer from './Footer';
 
-const routes = [Home, About, Projects, Apply, Contact];
+import { Teams } from './Teams'; 
+
+const routes = [Home, About, Projects, Apply, Contact, Teams];
 
 const links = [
   { home: Home },
@@ -20,6 +22,7 @@ const links = [
   { projects: Projects },
   { apply: Apply },
   { contact: Contact },
+  { Teams: Teams }
 ];
 
 const App = () => {
