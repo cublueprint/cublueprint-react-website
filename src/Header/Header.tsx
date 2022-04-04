@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 const Header = ({ links }: HeaderProps) => (
-  <StyledHeader id="13">
+  <StyledHeader>
     <BlueprintIcon link={links[0]} />
     <StyledHeaderList>
       {links.map((link) => (
