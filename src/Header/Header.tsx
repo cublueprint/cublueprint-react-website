@@ -87,7 +87,7 @@ const StyledHeaderLink = styled.div`
 `;
 
 const StyledBlueprintImage = styled.img`
-  padding-top: 5px;
+  margin-top: 10px;
   max-width: 150px;
   margin-left: 4vw;
 `;

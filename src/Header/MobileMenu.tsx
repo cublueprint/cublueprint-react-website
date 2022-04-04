@@ -9,13 +9,13 @@ interface MobileMenuProps {
 }
 
 interface MenuButtonProps {
-  getOpen: () => boolean;
+  open: boolean;
   handleToggle: () => void;
 }
 
 interface MenuListProps {
   links: string[];
-  getOpen: () => boolean;
+  open: boolean;
   closeList: () => void;
 }
 
@@ -26,62 +26,60 @@ interface StyledListProps {
 const MobileMenu = ({ links }: MobileMenuProps) => {
   const [open, setOpen] = useState(false);
 
-  const getOpen = () => open;
   const handleToggle = () => {
     console.log(open);
     setOpen(!open);
   }
   return (
     <div>
-      <MenuButton getOpen={getOpen} handleToggle={handleToggle}/>
-      <MenuList links={links} getOpen={getOpen} closeList={handleToggle} />
+      <MenuButton open={open} handleToggle={handleToggle}/>
+      <MenuList links={links} open={open} closeList={handleToggle} />
     </div>
   );
 };
 
-const MenuButton = ({getOpen, handleToggle}: MenuButtonProps) => {
+const MenuButton = ({open, handleToggle}: MenuButtonProps) => {
   return (
     <StyledMenuButton >
-      <button onClick={handleToggle}>
-        <img src={getOpen()? listCloseIcon : listIcon} />
+      <button className="headerListButton" onClick={handleToggle}>
+        <img src={open? listCloseIcon : listIcon} />
       </button>
     </StyledMenuButton>
   );
 }
 
-const MenuList = ({ links, getOpen, closeList }: MenuListProps) => {
+const MenuList = ({ links, open, closeList }: MenuListProps) => {
   return (
-    <div>
-      <StyledHeaderList isOpen={getOpen()}>
+    <>
+      <StyledHeaderList isOpen={open}>
         <>
         {links.map((link) => (
           <StyledHeaderLink key={`l-${link}`} onClick={closeList}>
-            <Link to={link}>{link}</Link>
+            <Link to={link} className="headerListLink">{link}</Link>
           </StyledHeaderLink>
         ))}
         </>
       </StyledHeaderList>
-    </div>
+    </>
   );
 }
 
 
 const StyledMenuButton = styled.div`
-  button {
+  button.headerListButton {
     background: transparent;
     border: none;
     color: white;
     height: 50px;
   }
   text-align: end;
-  padding-right: 1vw;
+  padding-right: 5px;
 `
 
 const StyledHeaderList = styled.div<StyledListProps>`
   display: ${(props) => (props.isOpen? 'flex': 'none') };
   flex-direction: column;
-  justify-content: space-evenly;
-  gap: 4vh;
+  gap: 20px;
   background-color: ${(props) => props.theme.colors.cloudBlue};
   padding: 10px 10px 10px 10px;
   text-align: end;
@@ -90,7 +88,7 @@ const StyledHeaderList = styled.div<StyledListProps>`
 `;
 
 const StyledHeaderLink = styled.div`
-  a {
+  a.headerListLink {
     text-decoration: none;
     color: ${(props) => props.theme.colors.primaryBlue};
   }
