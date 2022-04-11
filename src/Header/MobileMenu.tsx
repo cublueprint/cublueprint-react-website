@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import listIcon from './list.svg';
@@ -29,41 +29,42 @@ const MobileMenu = ({ links }: MobileMenuProps) => {
   const handleToggle = () => {
     console.log(open);
     setOpen(!open);
-  }
+  };
   return (
     <div>
-      <MenuButton open={open} handleToggle={handleToggle}/>
+      <MenuButton open={open} handleToggle={handleToggle} />
       <MenuList links={links} open={open} closeList={handleToggle} />
     </div>
   );
 };
 
-const MenuButton = ({open, handleToggle}: MenuButtonProps) => {
+const MenuButton = ({ open, handleToggle }: MenuButtonProps) => {
   return (
-    <StyledMenuButton >
-      <button className="headerListButton" onClick={handleToggle}>
-        <img src={open? listCloseIcon : listIcon} />
+    <StyledMenuButton>
+      <button className='headerListButton' onClick={handleToggle}>
+        <img src={open ? listCloseIcon : listIcon} />
       </button>
     </StyledMenuButton>
   );
-}
+};
 
 const MenuList = ({ links, open, closeList }: MenuListProps) => {
   return (
     <>
       <StyledHeaderList isOpen={open}>
         <>
-        {links.map((link) => (
-          <StyledHeaderLink key={`l-${link}`} onClick={closeList}>
-            <Link to={link} className="headerListLink">{link}</Link>
-          </StyledHeaderLink>
-        ))}
+          {links.map((link) => (
+            <StyledHeaderLink key={`l-${link}`} onClick={closeList}>
+              <Link to={link} className='headerListLink'>
+                {link}
+              </Link>
+            </StyledHeaderLink>
+          ))}
         </>
       </StyledHeaderList>
     </>
   );
-}
-
+};
 
 const StyledMenuButton = styled.div`
   button.headerListButton {
@@ -74,10 +75,10 @@ const StyledMenuButton = styled.div`
   }
   text-align: end;
   padding-right: 5px;
-`
+`;
 
 const StyledHeaderList = styled.div<StyledListProps>`
-  display: ${(props) => (props.isOpen? 'flex': 'none') };
+  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
   flex-direction: column;
   gap: 20px;
   background-color: ${(props) => props.theme.colors.cloudBlue};

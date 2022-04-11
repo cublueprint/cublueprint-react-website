@@ -46,14 +46,15 @@ const StyledHeader = styled.div`
   position: sticky;
   top: 0;
   height: 50px;
-  
+
   @media ${(props) => props.theme.viewport.laptop} {
     align-items: center;
   }
 `;
 
 const StyledHeaderList = styled.div`
-  @media ${(props) => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+  @media ${(props) =>
+      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
     display: none;
   }
 
@@ -67,7 +68,8 @@ const StyledHeaderList = styled.div`
 `;
 
 const StyledMobileMenu = styled.div`
-  @media ${(props) => `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
+  @media ${(props) =>
+      `${props.theme.viewport.mobile} , ${props.theme.viewport.tablet}`} {
     display: flex;
   }
 
