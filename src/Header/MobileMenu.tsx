@@ -40,11 +40,11 @@ const MobileMenu = ({ links }: MobileMenuProps) => {
 
 const MenuButton = ({ open, handleToggle }: MenuButtonProps) => {
   return (
-    <StyledMenuButton>
+    <StyledMenuListDiv>
       <button className='headerListButton' onClick={handleToggle}>
         <img src={open ? listCloseIcon : listIcon} />
       </button>
-    </StyledMenuButton>
+    </StyledMenuListDiv>
   );
 };
 
@@ -66,7 +66,7 @@ const MenuList = ({ links, open, closeList }: MenuListProps) => {
   );
 };
 
-const StyledMenuButton = styled.div`
+const StyledMenuListDiv = styled.div`
   button.headerListButton {
     background: transparent;
     border: none;
