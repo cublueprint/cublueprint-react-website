@@ -27,7 +27,10 @@ const TitleBlock = (props: TitleBlockProps) => (
         ))}
       </StyledButtonList>
     </StyledLeftBlock>
-    <img src={props.content.image.picture} alt={props.content.image.alt}></img>
+    <StyledTitleImage
+      src={props.content.image.picture}
+      alt={props.content.image.alt}
+    />
   </StyledTitleBlock>
 );
 
@@ -40,6 +43,7 @@ const StyledTitleBlock = styled.div`
 const StyledLeftBlock = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const StyledButtonList = styled.div`
@@ -66,6 +70,11 @@ const StyledButton = styled.button`
   :active {
     color: ${(props) => props.theme.colors.skyBlue};
   }
+`;
+
+const StyledTitleImage = styled.img`
+  width: 500px;
+  justify-content: center;
 `;
 
 export default TitleBlock;

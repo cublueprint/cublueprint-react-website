@@ -4,7 +4,7 @@ const teams_content = {
     subtitle:
       'Take a glimpse at the individuals who have made the team what it is today.',
     image: {
-      picture: 'ADD THIS IN LATER LEL',
+      picture: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Mallard2.jpg',
       alt: 'alt',
     },
     buttons: [
