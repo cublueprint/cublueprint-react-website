@@ -12,6 +12,10 @@ const teams_content = {
         content: 'JOIN US',
         link: 'ADD THIS IN LATER LEL',
       },
+      {
+        content: 'JOIN US2',
+        link: 'ADD THIS IN LATER LEL',
+      },
     ],
   },
   TeamsList: [
